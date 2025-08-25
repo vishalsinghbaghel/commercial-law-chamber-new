@@ -1,0 +1,28 @@
+
+.recent-insights {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.insight-card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.insight-card .icon {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+
+.why-clc {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card .icon {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+
