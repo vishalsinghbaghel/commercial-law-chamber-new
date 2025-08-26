@@ -1,115 +1,116 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import Logo from "/Logo.jpg";
-import "./Navbar.css";
-import { FaAngleDown } from "react-icons/fa";
+import Logo from "/Logo_old.jpg";
+import styles from "./Navbar.module.css";
+import {
+  FaAngleDown,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 
 export const Navbar = () => {
-  const [expertiseOpen, setExpertiseOpen] = useState(false);
-  const [aboutOpen, setAboutOpen] = useState(false);
-  const [insightsOpen, setInsightsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  const navLinkClass = ({ isActive }) =>
+    isActive ? `${styles.link} ${styles.active}` : styles.link;
+
+  const toggleMenu = (menuName) => {
+    setActiveMenu((prev) => (prev === menuName ? null : menuName));
+  };
 
   return (
-    <div className="container">
-      <div className="navbar">
-        <img className="logo" src={Logo} alt="CLC Logo" />
+    <div className={styles.container}>
+      <div className={styles.navbar}>
+        <img className={styles.logo} src={Logo} alt="CLC Logo" />
 
-        <nav className="navigation">
-          <NavLink to="/" className="link">
+        <nav className={styles.navigation}>
+          <NavLink to="/" className={navLinkClass}>
             Home
           </NavLink>
 
-          <div className="menu-item" onClick={() => setAboutOpen(!aboutOpen)}>
-            <span className="link with-icon">
+          <div className={styles.menuItem} onClick={() => toggleMenu("about")}>
+            <span className={`${styles.link} ${styles.withIcon}`}>
               <span>About</span>
-              <FaAngleDown className="icon" />
+              <FaAngleDown className={styles.icon} />
             </span>
-            {aboutOpen && (
-              <div className="submenu">
-                <NavLink to="/about/story" className="sublink">
+            {activeMenu === "about" && (
+              <div className={styles.submenu}>
+                <NavLink to="/about/story" className={styles.sublink}>
                   Our Story
                 </NavLink>
-                <NavLink to="/about/team" className="sublink">
+                <NavLink to="/about/team" className={styles.sublink}>
                   Our Team
                 </NavLink>
-                <NavLink to="/about/approach" className="sublink">
-                  Our Approach
-                </NavLink>
-                <NavLink to="/about/values" className="sublink">
-                  Values & Vision
-                </NavLink>
-                <NavLink to="/about/location" className="sublink">
-                  Office & Infrastructure
-                </NavLink>
               </div>
             )}
           </div>
 
           <div
-            className="menu-item"
-            onClick={() => setExpertiseOpen(!expertiseOpen)}
+            className={styles.menuItem}
+            onClick={() => toggleMenu("expertise")}
           >
-            <span className="link with-icon">
+            <span className={`${styles.link} ${styles.withIcon}`}>
               <span>Expertise</span>
-              <FaAngleDown className="icon" />
+              <FaAngleDown className={styles.icon} />
             </span>
-            {expertiseOpen && (
-              <div className="submenu">
-                <NavLink to="/expertise/tax" className="sublink">
-                  Direct & Indirect Tax
+            {activeMenu === "expertise" && (
+              <div className={styles.submenu}>
+                <NavLink to="/expertise/tax" className={styles.sublink}>
+                  Tax
                 </NavLink>
-                <NavLink to="/expertise/disputes" className="sublink">
-                  Regulatory & Commercial Disputes
-                </NavLink>
-                <NavLink to="/expertise/telecom" className="sublink">
-                  Telecom, Media & Technology
-                </NavLink>
-                <NavLink to="/expertise/agriculture" className="sublink">
-                  Agriculture & Agro-Sciences
-                </NavLink>
-                <NavLink to="/expertise/aviation" className="sublink">
-                  Aviation & Defense
-                </NavLink>
-                <NavLink to="/expertise/pharma" className="sublink">
-                  Pharmaceuticals & Healthcare
-                </NavLink>
-                <NavLink to="/expertise/realestate" className="sublink">
-                  Real Estate
+                <NavLink to="/expertise/telecom" className={styles.sublink}>
+                  Telecom
                 </NavLink>
               </div>
             )}
           </div>
 
           <div
-            className="menu-item"
-            onClick={() => setInsightsOpen(!insightsOpen)}
+            className={styles.menuItem}
+            onClick={() => toggleMenu("insights")}
           >
-            <span className="link with-icon">
+            <span className={`${styles.link} ${styles.withIcon}`}>
               <span>Insights</span>
-              <FaAngleDown className="icon" />
+              <FaAngleDown className={styles.icon} />
             </span>
-            {insightsOpen && (
-              <div className="submenu">
-                <NavLink to="/insights/tds-relief" className="sublink">
-                  TDS Prosecution Relief
-                </NavLink>
-                <NavLink to="/insights/insolvency" className="sublink">
-                  Insolvency Petition
-                </NavLink>
-                <NavLink to="/insights/insurance" className="sublink">
-                  Insurer Oversight Case
-                </NavLink>
-                <NavLink to="/insights/gst-hearing" className="sublink">
-                  GST Defaulter Hearing
+            {activeMenu === "insights" && (
+              <div className={styles.submenu}>
+                <NavLink to="/insights/gst" className={styles.sublink}>
+                  GST Hearing
                 </NavLink>
               </div>
             )}
           </div>
 
-          <NavLink to="/contacts" className="link">
+          <NavLink to="/contacts" className={navLinkClass}>
             Contacts
           </NavLink>
         </nav>
+
+        <div className={styles.socials}>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </div>
     </div>
   );

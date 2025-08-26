@@ -1,22 +1,50 @@
-
-.why-clc {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+.whyClc {
+  padding-bottom: 2rem;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  color: #fff;
+  text-align: center;
 }
 
-.highlight-card {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.sectionTitle {
+  font-size: 2.5rem;
+  color: #00e5ff;
+  font-weight: 600;
 }
 
-.highlight-card .icon {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
+.highlightCard {
+  width: 300px;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
 
+.highlightCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #00e5ff;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #ccc;
+}

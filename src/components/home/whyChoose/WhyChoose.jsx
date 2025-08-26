@@ -1,39 +1,47 @@
-import {FaBriefcase,FaStar, FaUserTie,} from "react-icons/fa";
+import { FaBriefcase, FaStar, FaUserTie } from "react-icons/fa";
 import styles from "./WhyChoose.module.css";
+import { motion } from "framer-motion";
 
 export const WhyChoose = () => {
-  return (
-    <>
-      <section className={styles["why-clc"]}>
-        <h2 className={styles["section-title"]}>Why Choose CLC</h2>
-        <div className={styles["cards-container"]}>
-          <div className={styles["highlight-card"]}>
-            <div className={styles["icon"]}>
-              <FaBriefcase />
-            </div>
-            <h3>25+ Years of Experience</h3>
-            <p>Trusted legal advisors with decades of courtroom expertise.</p>
-          </div>
-          <div className={styles["highlight-card"]}>
-            <div className={styles["icon"]}>
-              <FaStar />
-            </div>
-            <h3>100+ Notable Cases</h3>
-            <p>
-              Proven track record in high-stakes litigation and arbitration.
-            </p>
-          </div>
-          <div className={styles["highlight-card"]}>
-            <div className={styles["icon"]}>
-              <FaUserTie />
-            </div>
-            <h3>Client-Centric Approach</h3>
-            <p>Strategic counsel tailored to each client’s unique needs.</p>
-          </div>
-        </div>
-      </section>
+  const highlights = [
+    {
+      icon: <FaBriefcase />,
+      title: "25+ Years of Experience",
+      desc: "Trusted legal advisors with decades of courtroom expertise.",
+    },
+    {
+      icon: <FaStar />,
+      title: "100+ Notable Cases",
+      desc: "Proven track record in high-stakes litigation and arbitration.",
+    },
+    {
+      icon: <FaUserTie />,
+      title: "Client-Centric Approach",
+      desc: "Strategic counsel tailored to each client’s unique needs.",
+    },
+  ];
 
-     
-    </>
+  return (
+    <section className={styles.whyClc}>
+      <h2 className={styles.sectionTitle}>Why Choose CLC</h2>
+      <div className={styles.cardsContainer}>
+        {highlights.map((item, index) => (
+          <motion.div
+            key={index}
+            className={styles.highlightCard}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.icon}>{item.icon}</div>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
+
+export default WhyChoose;
