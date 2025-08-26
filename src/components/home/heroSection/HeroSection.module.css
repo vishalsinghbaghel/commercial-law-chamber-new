@@ -1,0 +1,94 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8));
+    z-index: 0;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/image/hero-bg.png");
+    /* or use imported image in inline style */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heroContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 100%;
+    padding: 2rem;
+    color: white;
+    text-align: left;
+}
+
+.heroContent {
+    max-width: 800px;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.heroTitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.welcomeSection {
+    background: rgba(255, 255, 255, 0.03);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.welcomeContent {
+    max-width: 700px;
+    margin: auto;
+}
+
+.welcomeContent h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00e5ff;
+}
+
+.welcomeContent p {
+    font-size: 1.1rem;
+    color: #ccc;
+}

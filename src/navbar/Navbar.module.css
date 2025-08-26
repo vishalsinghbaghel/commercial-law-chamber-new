@@ -1,0 +1,135 @@
+/* Container */
+.container {
+  width: 100%;
+  background: linear-gradient(to right, #002b5c 70%, #f4c542 30%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Link styles */
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.active {
+  color: #f4c542;
+}
+
+.link:hover {
+  color: #f4c542;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f4c542;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown menu */
+.menuItem {
+  position: relative;
+}
+
+.withIcon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 0.8rem;
+}
+
+/* Submenu */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  /* Increased from default */
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  z-index: 999;
+}
+
+.sublink {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  color: #002b5c;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  /* Prevents wrapping */
+}
+
+.sublink:hover {
+  color: #f4c542;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #f4c542;
+}
