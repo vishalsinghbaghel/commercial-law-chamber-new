@@ -1,0 +1,56 @@
+.footer {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.brand p {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navLinks a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: #ffd700;
+}
+
+.contact p {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #999999;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}

@@ -1,8 +1,5 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useRef, useEffect } from "react";
 import { Box, Typography, Card, CardContent, Avatar } from "@mui/material";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
@@ -24,76 +21,108 @@ const testimonials = [
     quote: "I felt supported and informed throughout the entire process.",
     image: "/image/img2.jpg",
   },
+  {
+    name: "Adv. Karan Joshi",
+    role: "Tax Law Advisor",
+    quote:
+      "Their strategic insights helped us navigate a complex audit with confidence.",
+    image: "/image/img4.jpg",
+  },
 ];
 
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 600,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 1 },
-    },
-  ],
-};
-
 const Testimonials = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let scrollAmount = 0;
+
+    const interval = setInterval(() => {
+      if (scrollContainer) {
+        scrollAmount += 320; // Approx width of one card + gap
+        if (
+          scrollAmount >=
+          scrollContainer.scrollWidth - scrollContainer.clientWidth
+        ) {
+          scrollAmount = 0; // Reset to start
+        }
+        scrollContainer.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    }, 4000); // Slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box
       sx={{
-        py: 10, // Increased height
-        background: "linear-gradient(to right, #f5f5f5, #eaeaea)",
+        py: 10,
+        backgroundColor: "burlywood",
         borderTop: "6px solid #1c4897",
         display: "flex",
         justifyContent: "center",
       }}
     >
-      <Box sx={{ maxWidth: 900, width: "100%", px: 2 }}>
+      <Box sx={{ maxWidth: 1200, width: "100%", px: 2 }}>
         <Typography variant="h4" align="center" color="primary" mb={4}>
           Client Testimonials
         </Typography>
 
-        <Slider {...sliderSettings}>
+        <Box
+          ref={scrollRef}
+          sx={{
+            display: "flex",
+            gap: 3,
+            overflowX: "auto",
+            scrollSnapType: "x mandatory",
+            pb: 2,
+            "&::-webkit-scrollbar": {
+              height: 8,
+            },
+            "&::-webkit-scrollbar-thumb": {
+              backgroundColor: "#1c4897",
+              borderRadius: 4,
+            },
+          }}
+        >
           {testimonials.map((t, i) => (
-            <Box key={i} px={2}>
-              <Card
-                sx={{
-                  minHeight: 250, // Increased card height
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <CardContent>
-                  <Box display="flex" alignItems="center" mb={2}>
-                    <Avatar
-                      src={t.image}
-                      alt={t.name}
-                      sx={{ width: 60, height: 60, mr: 2 }}
-                    />
-                    <Box>
-                      <Typography variant="h6">{t.name}</Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {t.role}
-                      </Typography>
-                    </Box>
+            <Card
+              key={i}
+              sx={{
+                minWidth: 300,
+                flex: "0 0 auto",
+                scrollSnapAlign: "start",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
+                },
+              }}
+            >
+              <CardContent>
+                <Box display="flex" alignItems="center" mb={2}>
+                  <Avatar
+                    src={t.image}
+                    alt={t.name}
+                    sx={{ width: 60, height: 60, mr: 2 }}
+                  />
+                  <Box>
+                    <Typography variant="h6">{t.name}</Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {t.role}
+                    </Typography>
                   </Box>
-                  <Typography variant="body1" color="text.primary">
-                    “{t.quote}”
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Box>
+                </Box>
+                <Typography variant="body1" color="text.primary">
+                  “{t.quote}”
+                </Typography>
+              </CardContent>
+            </Card>
           ))}
-        </Slider>
+        </Box>
       </Box>
     </Box>
   );

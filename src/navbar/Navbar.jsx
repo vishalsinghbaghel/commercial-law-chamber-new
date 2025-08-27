@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import Logo from "/Logo_old.jpg";
+import Logo from "/Logo.png";
 import styles from "./Navbar.module.css";
 import {
   FaAngleDown,

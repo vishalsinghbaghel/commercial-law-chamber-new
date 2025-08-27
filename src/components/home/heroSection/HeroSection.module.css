@@ -23,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("/public/image/hero-bg.png");
+    background-image: url("/public/image/hero.jpg");
     /* or use imported image in inline style */
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@
 .heroSubtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #e0e0e0;
+    color: #ffffff;
 }
 
 .heroButtons {
@@ -69,6 +69,10 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.heroButtons :global(button:hover) {
+    color: black;
 }
 
 .welcomeSection {
@@ -85,10 +89,10 @@
 .welcomeContent h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #00e5ff;
+    
 }
 
 .welcomeContent p {
     font-size: 1.1rem;
-    color: #ccc;
+    color: #ffffff;
 }
