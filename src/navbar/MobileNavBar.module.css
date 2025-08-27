@@ -1,0 +1,93 @@
+.mobileContainer {
+  position: relative;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0d1b2a;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 27, 42, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: "Merriweather", serif;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.active {
+  color: #d4af37;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submenu {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sublink {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sublink:hover {
+  color: #d4af37;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: white;
+}
