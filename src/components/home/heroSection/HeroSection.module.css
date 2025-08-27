@@ -36,18 +36,21 @@
     position: relative;
     z-index: 1;
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     height: 100%;
     padding: 2rem;
     color: white;
     text-align: left;
+
 }
 
 .heroContent {
     max-width: 800px;
     padding: 2rem;
     border-radius: 12px;
+    
 }
 
 .heroTitle {

@@ -11,9 +11,9 @@ export const Footer = () => {
         </div>
 
         <div className={styles.navLinks}>
-          <Link to="/about">About Us</Link>
+          <Link to="/about/team">About Us</Link>
           <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contacts">Contact</Link>
           <Link to="/careers">Careers</Link>
         </div>
 
