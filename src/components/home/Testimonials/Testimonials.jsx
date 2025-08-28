@@ -60,14 +60,13 @@ const Testimonials = () => {
     <Box
       sx={{
         py: 10,
-        backgroundColor: "burlywood",
-        borderTop: "6px solid #1c4897",
+        backgroundColor: "#0f172a",
         display: "flex",
         justifyContent: "center",
       }}
     >
       <Box sx={{ maxWidth: 1200, width: "100%", px: 2 }}>
-        <Typography variant="h4" align="center" color="primary" mb={4}>
+        <Typography variant="h4" align="center" mb={4}>
           Client Testimonials
         </Typography>
 
@@ -92,7 +91,7 @@ const Testimonials = () => {
             <Card
               key={i}
               sx={{
-                minWidth: 300,
+                width: "32%",
                 flex: "0 0 auto",
                 scrollSnapAlign: "start",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -100,6 +99,13 @@ const Testimonials = () => {
                   transform: "scale(1.05)",
                   boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
                 },
+                backgroundColor: "#002b5c",
+                color: "white",
+                padding: "1.5rem",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+                borderLeft: "10px solid #f4c542",
+                transition: "box-shadow 0.3s ease",
               }}
             >
               <CardContent>
@@ -111,12 +117,10 @@ const Testimonials = () => {
                   />
                   <Box>
                     <Typography variant="h6">{t.name}</Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {t.role}
-                    </Typography>
+                    <Typography variant="body2">{t.role}</Typography>
                   </Box>
                 </Box>
-                <Typography variant="body1" color="text.primary">
+                <Typography variant="body1" color="#f4c542">
                   “{t.quote}”
                 </Typography>
               </CardContent>
