@@ -39,19 +39,19 @@ const Testimonials = () => {
 
     const interval = setInterval(() => {
       if (scrollContainer) {
-        scrollAmount += 320; // Approx width of one card + gap
+        scrollAmount += 320;
         if (
           scrollAmount >=
           scrollContainer.scrollWidth - scrollContainer.clientWidth
         ) {
-          scrollAmount = 0; // Reset to start
+          scrollAmount = 0;
         }
         scrollContainer.scrollTo({
           left: scrollAmount,
           behavior: "smooth",
         });
       }
-    }, 4000); // Slide every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -66,7 +66,15 @@ const Testimonials = () => {
       }}
     >
       <Box sx={{ maxWidth: 1200, width: "100%", px: 2 }}>
-        <Typography variant="h4" align="center" mb={4}>
+        <Typography
+          variant="h4"
+          align="center"
+          mb={4}
+          sx={{
+            fontSize: { xs: "1.75rem", sm: "2rem", md: "2.25rem" },
+            color: "#fff",
+          }}
+        >
           Client Testimonials
         </Typography>
 
@@ -74,10 +82,13 @@ const Testimonials = () => {
           ref={scrollRef}
           sx={{
             display: "flex",
-            gap: 3,
+            gap: { xs: 2, sm: 3 },
             overflowX: "auto",
             scrollSnapType: "x mandatory",
             pb: 2,
+            px: { xs: 1, sm: 2 },
+            scrollBehavior: "smooth",
+            WebkitOverflowScrolling: "touch",
             "&::-webkit-scrollbar": {
               height: 8,
             },
@@ -91,7 +102,12 @@ const Testimonials = () => {
             <Card
               key={i}
               sx={{
-                width: "32%",
+                width: {
+                  xs: "90%",
+                  sm: "70%",
+                  md: "45%",
+                  lg: "32%",
+                },
                 flex: "0 0 auto",
                 scrollSnapAlign: "start",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -105,7 +121,6 @@ const Testimonials = () => {
                 borderRadius: "8px",
                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
                 borderLeft: "10px solid #f4c542",
-                transition: "box-shadow 0.3s ease",
               }}
             >
               <CardContent>
@@ -120,7 +135,13 @@ const Testimonials = () => {
                     <Typography variant="body2">{t.role}</Typography>
                   </Box>
                 </Box>
-                <Typography variant="body1" color="#f4c542">
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: { xs: "0.9rem", sm: "1rem" },
+                    color: "#f4c542",
+                  }}
+                >
                   “{t.quote}”
                 </Typography>
               </CardContent>
