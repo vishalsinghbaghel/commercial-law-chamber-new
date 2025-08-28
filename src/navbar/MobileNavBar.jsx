@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "/Logo_old.jpg";
-import styles from "./MobileNavbar.module.css";
+import styles from "./MobileNavBar.module.css";
 import {
   FaAngleDown,
   FaLinkedin,
