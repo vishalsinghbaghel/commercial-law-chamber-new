@@ -1,7 +1,8 @@
 /* Container */
 .container {
   width: 100%;
-  background: linear-gradient(to right, #002b5c 70%, #f4c542 30%);
+  /* background: linear-gradient(to right, #002b5c 70%, #f4c542 30%); */
+  background: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -26,11 +27,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  color: white;
+  color: rgb(247, 241, 241);
 }
 
 /* Logo */
 .logo {
+ 
   height: 60px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -49,7 +51,7 @@
 
 /* Link styles */
 .link {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -57,11 +59,11 @@
 }
 
 .active {
-  color: #f4c542;
+  color: #3700fd;
 }
 
 .link:hover {
-  color: #f4c542;
+  color: #0800fe;
 }
 
 .link::after {
@@ -121,7 +123,7 @@
 }
 
 .sublink:hover {
-  color: #f4c542;
+  color: #624848;
 }
 
 /* Social icons */
@@ -131,11 +133,24 @@
 }
 
 .socials a {
-  color: white;
+height: 40px;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
+.insta{
+height: 50px;
+
+}
+.linkedin {
+  height: 40px;
+
+}
+.twitter{
+  height: 40px;
+
+}
+
 .socials a:hover {
-  color: #f4c542;
+  color: #2600fe;
 }

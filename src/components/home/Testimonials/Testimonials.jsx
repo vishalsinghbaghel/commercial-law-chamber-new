@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Box, Typography, Card, CardContent, Avatar } from "@mui/material";
+import styles from "./Testimonials.module.css";
 
 const testimonials = [
   {
@@ -57,27 +58,9 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        py: 10,
-        backgroundColor: "#0f172a",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Box sx={{ maxWidth: 1200, width: "100%", px: 2 }}>
-        <Typography
-          variant="h4"
-          align="center"
-          mb={4}
-          sx={{
-            fontSize: { xs: "1.75rem", sm: "2rem", md: "2.25rem" },
-            color: "#fff",
-          }}
-        >
-          Client Testimonials
-        </Typography>
-
+    <Box className={styles.box}>
+      <Box className={styles.cardsContainer}>
+        <h2 className={styles.sectionTitle}>Client Testimonials</h2>
         <Box
           ref={scrollRef}
           sx={{

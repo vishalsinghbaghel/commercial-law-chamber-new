@@ -59,8 +59,8 @@ export const Navbar = () => {
                 <NavLink to="/expertise/tax" className={styles.sublink}>
                   Tax
                 </NavLink>
-                <NavLink to="/expertise/telecom" className={styles.sublink}>
-                  Telecom
+                <NavLink to="/expertise/disputes" className={styles.sublink}>
+                  Disputes
                 </NavLink>
               </div>
             )}
@@ -76,7 +76,7 @@ export const Navbar = () => {
             </span>
             {activeMenu === "insights" && (
               <div className={styles.submenu}>
-                <NavLink to="/insights/gst" className={styles.sublink}>
+                <NavLink to="/insights" className={styles.sublink}>
                   GST Hearing
                 </NavLink>
               </div>
@@ -90,25 +90,23 @@ export const Navbar = () => {
 
         <div className={styles.socials}>
           <a
+            className={styles["linkedin"]}
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin />
+            <img src="/image/linkedin.jpg" className={styles["linkedin"]} />
           </a>
           <a
+            className={styles["twitter"]}
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter />
+            <img src="/image/twitter.jpg" className={styles["twitter"]} />
           </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
+          <a target="_blank" rel="noopener noreferrer">
+            <img src="/image/insta.jpg" className={styles["insta"]} />
           </a>
         </div>
       </div>

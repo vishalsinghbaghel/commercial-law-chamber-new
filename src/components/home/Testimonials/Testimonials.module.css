@@ -1,0 +1,32 @@
+.box {
+  background-color: #ede7db; /* Match navbar background */
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #002b5c;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 0rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}

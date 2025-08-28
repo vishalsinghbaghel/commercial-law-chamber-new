@@ -1,19 +1,23 @@
 .practiceAreas {
-  background-color: #0f172a;
+  background-color: #eef2f6;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding: 2rem 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 2rem;
 }
 
 .sectionTitle {
   font-size: 2.5rem;
   text-align: center;
-  color: #fff;
-  margin-bottom: 2rem;
+  color: #002b5c;
 }
 
 .cardsContainer {
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .practiceCard {
@@ -30,6 +34,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-right: 20px;
 }
 
 .practiceCard:hover {

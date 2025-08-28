@@ -5,7 +5,7 @@ import { Team } from "../components/about/Team";
 import { Tax } from "../components/expertise/Tax";
 // import { Tax } from "../components/expertise/Tax";
 // import { Disputes } from "../components/expertise/Disputes";
- import { Telecom } from "../components/expertise/Telecom";
+ import { Disputes } from "../components/expertise/Disputes";
 // import { Agriculture } from "../components/expertise/Agriculture";
 // import { Aviation } from "../components/expertise/Aviation";
 // import { Pharma } from "../components/expertise/Pharma";
@@ -26,7 +26,7 @@ export const AllRoutes = () => {
 
       {/* About Routes */}
       {/* <Route path="/about" element={<About />} /> */}
-      <Route path="/about/ourStory" element={<OurStory/>} />
+      <Route path="/about/ourStory" element={<OurStory />} />
       <Route path="/about/Team" element={<Team />} />
       {/* <Route path="/about/approach" element={<OurApproach />} />
       <Route path="/about/values" element={<ValuesVision />} />
@@ -35,9 +35,8 @@ export const AllRoutes = () => {
       {/* Expertise Routes */}
       {/* <Route path="/expertise" element={<Expertise />} /> */}
       <Route path="/expertise/tax" element={<Tax />} />
-      <Route path="/expertise/telecom" element={<Telecom />} />
-      {/* <Route path="/expertise/disputes" element={<Disputes />} />
-      
+      <Route path="/expertise/disputes" element={<Disputes />} />
+      {/*<Route path="/expertise/telecom" element={<Telecom />} />
       <Route path="/expertise/agriculture" element={<Agriculture />} />
       <Route path="/expertise/aviation" element={<Aviation />} />
       <Route path="/expertise/pharma" element={<Pharma />} />
