@@ -44,8 +44,8 @@ export const AllRoutes = () => {
 
       {/* Insights Routes */}
       <Route path="/insights" element={<Insights />} />
-      {/* <Route path="/insights/tds-relief" element={<TDSRelief />} />
-      <Route path="/insights/insolvency" element={<Insolvency />} />
+      <Route path="/insights/{}" element={<TDSRelief />} />
+      {/*<Route path="/insights/insolvency" element={<Insolvency />} />
       <Route path="/insights/insurance" element={<Insurance />} />
       <Route path="/insights/gst-hearing" element={<GSTHearing />} /> */}
 

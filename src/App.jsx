@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { MobileNavbar } from "./navbar/MobileNavBar";
 import { Footer } from "./components/footer/Footer";
 
+
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -20,7 +21,8 @@ function App() {
       {isMobile ? <MobileNavbar /> : <Navbar />}
       <AllRoutes />
       <ScrollToTop />
-      <Footer/>
+      <Footer />
+     
     </>
   );
 }

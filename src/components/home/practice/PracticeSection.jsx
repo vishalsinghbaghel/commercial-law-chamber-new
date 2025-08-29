@@ -15,7 +15,7 @@ import styles from "./PracticeSection.module.css";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 export const PracticeSection = () => {
   const practiceAreas = [
@@ -79,10 +79,10 @@ export const PracticeSection = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     pauseOnHover: true,
-    
     responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
       { breakpoint: 960, settings: { slidesToShow: 2 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },
     ],
@@ -90,25 +90,26 @@ export const PracticeSection = () => {
 
   return (
     <section className={styles.practiceAreas}>
-      <h2 className={styles.sectionTitle}>Core Practice Areas</h2>
-      <Slider {...settings} className={styles.cardsContainer}>
-        {practiceAreas.map((area, index) => (
-          <Box key={index} px={1}>
-            <motion.div
-              key={index}
-              className={styles.practiceCard}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className={styles.icon}>{area.icon}</div>
-              <h3>{area.title}</h3>
-              <p>{area.desc}</p>
-            </motion.div>
-          </Box>
-        ))}
-      </Slider>
+      <Container maxWidth="lg">
+        <h2 className={styles.sectionTitle}>Core Practice Areas</h2>
+        <Slider {...settings} className={styles.cardsContainer}>
+          {practiceAreas.map((area, index) => (
+            <Box key={index} px={1}>
+              <motion.div
+                className={styles.practiceCard}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={styles.icon}>{area.icon}</div>
+                <h3>{area.title}</h3>
+                <p>{area.desc}</p>
+              </motion.div>
+            </Box>
+          ))}
+        </Slider>
+      </Container>
     </section>
   );
 };

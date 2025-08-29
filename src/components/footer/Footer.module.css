@@ -50,7 +50,7 @@
     transition: transform 0.3s ease, color 0.3s ease;
 } */
 .insta {
-    height: 50px;
+    height: 40px;
 
 }
 
@@ -63,10 +63,6 @@
     height: 40px;
 
 }
-/* .socialIcons a:hover {
-    color: #f4c542;
-    transform: scale(1.1);
-} */
 
 /* Back to Top Button */
 .backToTop {
