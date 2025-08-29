@@ -105,7 +105,11 @@ export const Navbar = () => {
           >
             <img src="/image/twitter.jpg" className={styles["twitter"]} />
           </a>
-          <a target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/image/insta.jpg" className={styles["insta"]} />
           </a>
         </div>

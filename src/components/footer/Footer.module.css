@@ -1,56 +1,134 @@
 .footer {
-    background-color: #1c1c1c;
-    color: #f0f0f0;
-    padding: 40px 20px 20px;
+    background: linear-gradient(135deg, #0a1f44, #122b5c);
+    color: #fff;
+    padding: 3rem 1rem 1rem;
     font-family: 'Segoe UI', sans-serif;
+   
 }
 
-.footerContent {
+.footerTop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-between; 
+     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+/* Brand Section */
+.brand {
+    flex: 1 1 300px;
+   
 }
 
 .brand h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #f4c542;
+    /* Gold heading */
 }
 
 .brand p {
+    display: flex;
+        
     font-size: 0.95rem;
-    color: #cccccc;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+   color: #fff;
 }
 
-.navLinks {
+/* Social Icons */
+.socialIcons {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+/* .socialIcons a {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+} */
+.insta {
+    height: 50px;
+
+}
+
+.linkedin {
+    height: 40px;
+
+}
+
+.twitter {
+    height: 40px;
+
+}
+/* .socialIcons a:hover {
+    color: #f4c542;
+    transform: scale(1.1);
+} */
+
+/* Back to Top Button */
+.backToTop {
+    background: #f4c542;
+    color: #0a1f44;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:background 0.3s ease;
+}
+
+.backToTop:hover {
+    background: #d9a821;
+}
+
+/* Links Section */
+.links {
+    /* flex: 1 1 200px; */
+    /* flex-direction: column; */
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+        gap: 0.5rem;
 }
 
-.navLinks a {
-    color: #f0f0f0;
+.links h3 {
+    margin-bottom: 0.8rem;
+    color: #f4c542;
+    font-size: 1.1rem;
+}
+
+.links a {
+    display: block;
+    color: #fff;
     text-decoration: none;
+    margin-bottom: 0.4rem;
     transition: color 0.3s ease;
 }
 
-.navLinks a:hover {
-    color: #ffd700;
+.links a:hover {
+    color: #f4c542;
 }
 
-.contact p {
-    font-size: 0.9rem;
-    color: #cccccc;
-}
-
+/* Footer Bottom */
 .footerBottom {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 2rem;
     font-size: 0.85rem;
-    color: #999999;
-    border-top: 1px solid #333;
-    padding-top: 15px;
+    opacity: 0.7;
+    border-top: 1px solid rgba(205, 205, 205, 0.2);
+    padding-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footerTop {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .links {
+        margin-top: 1rem;
+    }
 }
