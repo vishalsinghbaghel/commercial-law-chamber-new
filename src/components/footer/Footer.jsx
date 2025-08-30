@@ -52,15 +52,17 @@ export const Footer = () => {
         {/* Middle Section - Site Map */}
         <div className={styles.links}>
           <h3>Site Map</h3>
-          <Link to="/about">About Us</Link>
+          <Link to="/about/ourStory">About OurStory</Link>
+          <Link to="/about/Team">About OurTeam</Link>
 
-          <Link to="/expertise">Expertise</Link>
+          <Link to="/expertise/tax">Expertise Tax</Link>
+          <Link to="/expertise/disputes">Expertise Disputes</Link>
 
-          <Link to="/resources">Resources & News</Link>
+          <Link to="/insights">Resources & News</Link>
 
           <Link to="/careers">Careers</Link>
 
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contacts">Contact Us</Link>
         </div>
 
         {/* Right Section - Legal */}
