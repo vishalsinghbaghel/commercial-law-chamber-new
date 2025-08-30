@@ -22,7 +22,7 @@ export const NCDRCCasePage = () => {
           <Typography variant="h6" gutterBottom>
             🧾 Introduction
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             In a landmark ruling, the NCDRC held Oriental Insurance liable for
             wrongfully repudiating a fire insurance claim despite the insured
             fulfilling all obligations. The case involved a ₹2.28 crore claim
@@ -34,7 +34,7 @@ export const NCDRCCasePage = () => {
           <Typography variant="h6" gutterBottom>
             🔍 Background & Key Facts
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             The fire occurred at A.K. Rubber’s Sarigam factory in 2014. Though
             the policy was renewed in 2013, it mistakenly covered the old
             Dabhel, Daman location. The insured’s banker had requested coverage
@@ -92,7 +92,7 @@ export const NCDRCCasePage = () => {
           <Typography variant="h6" gutterBottom>
             📝 Conclusion
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             This ruling reinforces insurer accountability and protects
             policyholders from procedural errors. Businesses must ensure clear
             communication and documentation during policy renewals.

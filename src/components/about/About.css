@@ -20,7 +20,7 @@
 
 .about-hero p {
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .about-body h2 {
@@ -33,5 +33,5 @@
 .about-body p {
   font-size: 1rem;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #000000;
 }

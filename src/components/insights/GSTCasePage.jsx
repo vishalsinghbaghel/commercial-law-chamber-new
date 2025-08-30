@@ -22,7 +22,7 @@ export const GSTCasePage = () => {
           <Typography variant="h6" gutterBottom>
             🧾 Introduction
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             In a ruling with implications for procedural fairness, the Delhi
             High Court granted a fresh hearing to M/s Jinender Paper Mart, whose
             GST registration was cancelled without a fair opportunity to
@@ -55,7 +55,7 @@ export const GSTCasePage = () => {
           <Typography variant="h6" gutterBottom>
             🧑‍⚖️ Observations & Findings
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             The Court noted that although a hearing was scheduled, the
             petitioner couldn’t respond due to GST portal restrictions. It
             acknowledged the procedural lapse and granted a fresh hearing in
@@ -84,7 +84,7 @@ export const GSTCasePage = () => {
           <Typography variant="h6" gutterBottom>
             📝 Conclusion
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1" paragraph sx={{ color: "black" }}>
             This judgment reinforces the importance of natural justice in tax
             adjudication. It offers temporary relief to the petitioner while the
             industry awaits clarity on GST notification validity from the

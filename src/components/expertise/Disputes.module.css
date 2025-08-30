@@ -31,7 +31,9 @@ ul {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
 }
-
+p{
+    color: #000000;
+}
 .cta {
     text-align: center;
     margin-top: 2.5rem;
