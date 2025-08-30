@@ -64,7 +64,7 @@ export const Navbar = () => {
           <NavLink
             to="/insights"
             className={navLinkClass}
-            onClick={() => setMenuOpen(false)}
+           
           >
             Insights
           </NavLink>
