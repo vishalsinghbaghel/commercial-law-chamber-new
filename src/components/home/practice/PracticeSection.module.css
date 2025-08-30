@@ -1,7 +1,5 @@
-
 .practiceAreas {
   background-color: #eef2f6;
-  font-family: "Open Sans", sans-serif;
   padding: 1rem 0 2rem;
 }
 
@@ -30,6 +28,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-left: 5%;
 }
 
 .practiceCard:hover {
@@ -49,7 +48,7 @@ h3 {
   font-weight: 600;
 }
 
-p {
+.practiceCard p {
   margin: 0;
   font-size: 0.95rem;
   color: #ccc;

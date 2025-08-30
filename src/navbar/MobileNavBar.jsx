@@ -56,7 +56,7 @@ export const MobileNavbar = () => {
               {activeMenu === "about" && (
                 <div className={styles.submenu}>
                   <NavLink
-                    to="/about/story"
+                    to="/about/ourStory"
                     className={styles.sublink}
                     onClick={() => setMenuOpen(false)}
                   >
@@ -90,35 +90,23 @@ export const MobileNavbar = () => {
                     Tax
                   </NavLink>
                   <NavLink
-                    to="/expertise/telecom"
+                    to="/expertise/disputes"
                     className={styles.sublink}
                     onClick={() => setMenuOpen(false)}
                   >
-                    Telecom
+                    Disputes
                   </NavLink>
                 </div>
               )}
             </div>
 
-            <div className={styles.menuItem}>
-              <span
-                onClick={() => toggleMenu("insights")}
-                className={styles.dropdownToggle}
-              >
-                Insights <FaAngleDown className={styles.icon} />
-              </span>
-              {activeMenu === "insights" && (
-                <div className={styles.submenu}>
-                  <NavLink
-                    to="/insights/gst"
-                    className={styles.sublink}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    GST Hearing
-                  </NavLink>
-                </div>
-              )}
-            </div>
+            <NavLink
+              to="/insights"
+              className={navLinkClass}
+              onClick={() => setMenuOpen(false)}
+            >
+              Insights
+            </NavLink>
 
             <NavLink
               to="/contacts"

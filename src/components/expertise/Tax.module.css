@@ -1,5 +1,4 @@
 .tax-page {
-  font-family: 'Segoe UI', sans-serif;
   padding: 2rem;
   background-color: #f4f6f8;
   color: #333;
@@ -13,13 +12,13 @@
 }
 
 .subtitle {
-  
   color: #000000;
 }
 
 .overview p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: #555;
 }
 
 .experience {
@@ -63,12 +62,10 @@
 
 .cta-button:hover {
   background-color: #003d80;
-
 }
 
-p {
+.approach p {
   margin: 0;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: #555;
 }
-

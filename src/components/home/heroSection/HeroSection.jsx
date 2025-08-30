@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import styles from "./HeroSection.module.css";
+import styles from "./HeroSection1.module.css";
+
+
 import { AnimatedButton } from "../../common/AnimatedButton";
 
 export const HeroSection = () => {

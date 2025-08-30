@@ -1,11 +1,9 @@
 import { AllRoutes } from "./Routes/AllRoutes";
 import "./App.css";
 import { Navbar } from "./navbar/Navbar";
-import ScrollToTop from "./components/common/ScrollToTop";
 import { useEffect, useState } from "react";
 import { MobileNavbar } from "./navbar/MobileNavBar";
 import { Footer } from "./components/footer/Footer";
-
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -20,9 +18,7 @@ function App() {
     <>
       {isMobile ? <MobileNavbar /> : <Navbar />}
       <AllRoutes />
-      <ScrollToTop />
       <Footer />
-     
     </>
   );
 }

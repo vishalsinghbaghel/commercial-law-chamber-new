@@ -2,12 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "/Logo.png";
 import styles from "./Navbar.module.css";
-import {
-  FaAngleDown,
-  FaLinkedin,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 
 export const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -66,22 +61,13 @@ export const Navbar = () => {
             )}
           </div>
 
-          <div
-            className={styles.menuItem}
-            onClick={() => toggleMenu("insights")}
+          <NavLink
+            to="/insights"
+            className={navLinkClass}
+            onClick={() => setMenuOpen(false)}
           >
-            <span className={`${styles.link} ${styles.withIcon}`}>
-              <span>Insights</span>
-              <FaAngleDown className={styles.icon} />
-            </span>
-            {activeMenu === "insights" && (
-              <div className={styles.submenu}>
-                <NavLink to="/insights" className={styles.sublink}>
-                  GST Hearing
-                </NavLink>
-              </div>
-            )}
-          </div>
+            Insights
+          </NavLink>
 
           <NavLink to="/contacts" className={navLinkClass}>
             Contacts

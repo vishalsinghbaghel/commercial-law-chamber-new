@@ -32,7 +32,6 @@
 
 /* Logo */
 .logo {
- 
   height: 60px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -133,22 +132,19 @@
 }
 
 .socials a {
-height: 40px;
+  height: 40px;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
-.insta{
-height: 40px;
-
+.insta {
+  height: 40px;
 }
 .linkedin {
   height: 40px;
-
 }
-.twitter{
+.twitter {
   height: 40px;
-
 }
 
 .socials a:hover {

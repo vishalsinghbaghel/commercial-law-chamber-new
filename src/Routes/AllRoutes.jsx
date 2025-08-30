@@ -5,7 +5,7 @@ import { Team } from "../components/about/Team";
 import { Tax } from "../components/expertise/Tax";
 // import { Tax } from "../components/expertise/Tax";
 // import { Disputes } from "../components/expertise/Disputes";
- import { Disputes } from "../components/expertise/Disputes";
+import { Disputes } from "../components/expertise/Disputes";
 // import { Agriculture } from "../components/expertise/Agriculture";
 // import { Aviation } from "../components/expertise/Aviation";
 // import { Pharma } from "../components/expertise/Pharma";
@@ -18,9 +18,6 @@ import { NCDRCCasePage } from "../components/insights/NCDRCCasePage";
 import { GSTCasePage } from "../components/insights/GSTCasePage";
 
 import { Contact } from "../components/contacts/Contact";
-
-
-
 
 export const AllRoutes = () => {
   return (
@@ -57,7 +54,8 @@ export const AllRoutes = () => {
         element={<NCDRCCasePage />}
       />
       <Route
-        path="/insights/online-gaming-taxation" element={<GSTCasePage />}
+        path="/insights/online-gaming-taxation"
+        element={<GSTCasePage />}
       />
       {/* Contact Route */}
       <Route path="/contacts" element={<Contact />} />

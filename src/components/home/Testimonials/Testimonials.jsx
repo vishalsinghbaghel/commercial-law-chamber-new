@@ -115,7 +115,9 @@ const Testimonials = () => {
                   />
                   <Box>
                     <Typography variant="h6">{t.name}</Typography>
-                    <Typography variant="body2">{t.role}</Typography>
+                    <Typography variant="body2" color="#ccc">
+                      {t.role}
+                    </Typography>
                   </Box>
                 </Box>
                 <Typography

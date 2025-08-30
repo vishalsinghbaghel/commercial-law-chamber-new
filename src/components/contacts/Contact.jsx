@@ -26,7 +26,7 @@ export const Contact = () => {
     {
       icon: <FaMapMarkerAlt />,
       label: "Address",
-      value: "198 West 21th Street, Suite 721 New York NY 10016",
+      value: "New Delhi, India",
     },
     {
       icon: <FaPhoneAlt />,
@@ -43,8 +43,8 @@ export const Contact = () => {
     {
       icon: <FaGlobe />,
       label: "Website",
-      value: "yoursite.com",
-      link: "#",
+      value: "commerial-law-chambers.vercel.app",
+      link: "https://commerial-law-chambers.vercel.app/",
     },
   ];
 
@@ -65,7 +65,7 @@ export const Contact = () => {
           zIndex: 0,
         }}
       />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ marginBottom: "5%" }}>
         {/* Contact Info Cards */}
         <Box
           sx={{
@@ -136,6 +136,7 @@ export const Contact = () => {
                       wordBreak: "break-word",
                       overflowWrap: "break-word",
                       whiteSpace: "normal",
+                      color: "#fff",
                     }}
                   >
                     {item.value}
@@ -167,7 +168,7 @@ export const Contact = () => {
           >
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16422.248139339015!2d81.32457025978051!3d24.575704213843114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398459e38c608231%3A0xd52f3fe6a1b00536!2sItaura%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1756108745392!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63410.6143112817!2d77.13501002435855!3d28.61349677243199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3a9dcf383c9%3A0xacb3810ea0f185a5!2sCommercial%20Law%20Chamber%20(CLC)%2C%20Taxation%2C%20Technology%2C%20Media%20%26%20Telecom%20specialist%20Law%20Firm!5e1!3m2!1sen!2sin!4v1756534796831!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

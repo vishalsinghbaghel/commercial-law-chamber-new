@@ -72,7 +72,7 @@ export const PracticeSection = () => {
   ];
 
   const settings = {
-    arrows: true,
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 1000,
@@ -94,7 +94,7 @@ export const PracticeSection = () => {
         <h2 className={styles.sectionTitle}>Core Practice Areas</h2>
         <Slider {...settings} className={styles.cardsContainer}>
           {practiceAreas.map((area, index) => (
-            <Box key={index} px={1}>
+            <Box data-testid="ankur$`{index}`" key={index} px={1}>
               <motion.div
                 className={styles.practiceCard}
                 initial={{ opacity: 0, y: 30 }}

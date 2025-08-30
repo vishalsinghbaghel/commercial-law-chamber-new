@@ -1,47 +1,44 @@
 .footer {
-    background: linear-gradient(135deg, #0a1f44, #122b5c);
-    color: #fff;
-    padding: 3rem 1rem 1rem;
-    font-family: 'Segoe UI', sans-serif;
-   
+  background: linear-gradient(135deg, #0a1f44, #122b5c);
+  color: #fff;
+  padding: 3rem 1rem 1rem;
 }
 
 .footerTop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-     gap: 2rem;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Brand Section */
 .brand {
-    flex: 1 1 300px;
-   
+  flex: 1 1 300px;
 }
 
 .brand h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #f4c542;
-    /* Gold heading */
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #f4c542;
+  /* Gold heading */
 }
 
 .brand p {
-    display: flex;
-        
-    font-size: 0.95rem;
-    opacity: 0.85;
-    margin-bottom: 1rem;
-   color: #fff;
+  display: flex;
+
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
 /* Social Icons */
 .socialIcons {
-    display: flex;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 /* .socialIcons a {
@@ -50,81 +47,82 @@
     transition: transform 0.3s ease, color 0.3s ease;
 } */
 .insta {
-    height: 40px;
-
+  height: 40px;
 }
 
 .linkedin {
-    height: 40px;
-
+  height: 40px;
 }
 
 .twitter {
-    height: 40px;
-
+  height: 40px;
 }
 
 /* Back to Top Button */
 .backToTop {
-    background: #f4c542;
-    color: #0a1f44;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition:background 0.3s ease;
+  background: #f4c542;
+  color: #0a1f44;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .backToTop:hover {
-    background: #d9a821;
+  background: #d9a821;
 }
 
 /* Links Section */
 .links {
-    /* flex: 1 1 200px; */
-    /* flex-direction: column; */
-    display: flex;
-    flex-direction: column;
-        gap: 0.5rem;
+  /* flex: 1 1 200px; */
+  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .links h3 {
-    margin-bottom: 0.8rem;
-    color: #f4c542;
-    font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #f4c542;
+  font-size: 1.1rem;
 }
 
 .links a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 0.4rem;
-    transition: color 0.3s ease;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
 }
 
 .links a:hover {
-    color: #f4c542;
+  color: #f4c542;
 }
 
 /* Footer Bottom */
 .footerBottom {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    opacity: 0.7;
-    border-top: 1px solid rgba(205, 205, 205, 0.2);
-    padding-top: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(205, 205, 205, 0.2);
+  padding-top: 1rem;
+}
+
+.footerBottom p {
+  color: #ccc;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .footerTop {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
+  .footerTop {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 
-    .links {
-        margin-top: 1rem;
-    }
+  .links {
+    margin-top: 1rem;
+  }
 }
