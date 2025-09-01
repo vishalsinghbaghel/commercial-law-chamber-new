@@ -1,3 +1,6 @@
+
+
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import {
   FaBalanceScale,
@@ -18,6 +21,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Box, Container } from "@mui/material";
 
 export const PracticeSection = () => {
+  const [sliderSettings, setSliderSettings] = useState({});
+
   const practiceAreas = [
     {
       icon: <FaFileAlt />,
@@ -71,44 +76,67 @@ export const PracticeSection = () => {
     },
   ];
 
-  const settings = {
-    arrows: false,
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    pauseOnHover: true,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 960, settings: { slidesToShow: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
-    ],
-  };
+  useEffect(() => {
+    const width = window.innerWidth;
+
+    const baseSettings = {
+      arrows: false,
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      pauseOnHover: true,
+      swipeToSlide: true,
+      touchThreshold: 10,
+      responsive: [
+        { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 3 } },
+        { breakpoint: 960, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+        {
+          breakpoint: 600,
+          settings: { slidesToShow: 1, slidesToScroll: 1, dots: false },
+        },
+      ],
+    };
+
+    if (width >= 1280) {
+      setSliderSettings({
+        ...baseSettings,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+      });
+    } else {
+      setSliderSettings({
+        ...baseSettings,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  }, []);
 
   return (
     <section className={styles.practiceAreas}>
       <Container maxWidth="lg">
         <h2 className={styles.sectionTitle}>Core Practice Areas</h2>
-        <Slider {...settings} className={styles.cardsContainer}>
-          {practiceAreas.map((area, index) => (
-            <Box data-testid="ankur$`{index}`" key={index} px={1}>
-              <motion.div
-                className={styles.practiceCard}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className={styles.icon}>{area.icon}</div>
-                <h3>{area.title}</h3>
-                <p>{area.desc}</p>
-              </motion.div>
-            </Box>
-          ))}
-        </Slider>
+        {sliderSettings.slidesToShow && (
+          <Slider {...sliderSettings} className={styles.cardsContainer}>
+            {practiceAreas.map((area, index) => (
+              <Box key={index} px={1}>
+                <motion.div
+                  className={styles.practiceCard}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={styles.icon}>{area.icon}</div>
+                  <h3>{area.title}</h3>
+                  <p>{area.desc}</p>
+                </motion.div>
+              </Box>
+            ))}
+          </Slider>
+        )}
       </Container>
     </section>
   );

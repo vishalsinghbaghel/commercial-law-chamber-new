@@ -1,0 +1,1 @@
+ // slidesToShow: 4,
