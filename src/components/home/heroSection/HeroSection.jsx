@@ -8,7 +8,7 @@ export const HeroSection = () => {
   return (
     <div className={styles.container}>
       {/* Hero Banner */}
-      <div className={styles.backgroundImage} />
+      {/* <div className={styles.backgroundImage} /> */}
       <section className={styles.heroContainer}>
         <motion.div
           className={styles.heroContent}

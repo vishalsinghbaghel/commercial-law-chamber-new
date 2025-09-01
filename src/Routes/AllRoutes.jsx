@@ -18,6 +18,7 @@ import { NCDRCCasePage } from "../components/insights/NCDRCCasePage";
 import { GSTCasePage } from "../components/insights/GSTCasePage";
 
 import { Contact } from "../components/contacts/Contact";
+import { CareerPage } from "../components/career/Career";
 
 export const AllRoutes = () => {
   return (
@@ -57,8 +58,13 @@ export const AllRoutes = () => {
         path="/insights/online-gaming-taxation"
         element={<GSTCasePage />}
       />
+
+      <Route path="/careers" element={<CareerPage />} />
+   
+
       {/* Contact Route */}
       <Route path="/contacts" element={<Contact />} />
     </Routes>
+
   );
 };
