@@ -1,6 +1,7 @@
 import "./About.css";
 import { motion } from "framer-motion";
 
+
 export const OurStory = () => {
   return (
     <main className="about-container">
@@ -54,6 +55,7 @@ export const OurStory = () => {
           </p>
         </section>
       </motion.div>
+     
     </main>
   );
 };

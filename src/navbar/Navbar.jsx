@@ -37,6 +37,12 @@ export const Navbar = () => {
                 <NavLink to="/about/team" className={styles.sublink}>
                   Our Team
                 </NavLink>
+                <NavLink to="/about/Review" className={styles.sublink}>
+                  Review
+                </NavLink>
+                <NavLink to="/about/FAQ" className={styles.sublink}>
+                  FAQ
+                </NavLink>
               </div>
             )}
           </div>
@@ -61,11 +67,7 @@ export const Navbar = () => {
             )}
           </div>
 
-          <NavLink
-            to="/insights"
-            className={navLinkClass}
-           
-          >
+          <NavLink to="/insights" className={navLinkClass}>
             Insights
           </NavLink>
 

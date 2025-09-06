@@ -5,6 +5,8 @@ import Testimonials from "./Testimonials/Testimonials";
 import { WhyChoose } from "./whyChoose/WhyChoose";
 import styles from "./Home.module.css"; 
 
+
+
 export const Home = () => {
   return (
     <div className={styles.container}>
@@ -13,6 +15,7 @@ export const Home = () => {
       <WhyChoose />
       <RecentInsights />
       <Testimonials />
+      
     </div>
   );
 };

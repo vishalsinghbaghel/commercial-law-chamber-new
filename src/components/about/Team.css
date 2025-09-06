@@ -1,3 +1,33 @@
+.main-header {
+  width: 100%;
+  background-color: #4a90e2;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 40vh;
+}
+
+.header-title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+}
+
 .team-background {
   background-color: #f4f6f9;
   min-height: 100vh;

@@ -5,32 +5,7 @@
     overflow: hidden;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.8));
-    z-index: 0;
-}
 
-.backgroundImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/public/image/hero.jpg");
-    /* or use imported image in inline style */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    overflow: hidden;
-    z-index: 0;
-}
 
 .heroContainer {
     position: relative;
@@ -84,7 +59,6 @@
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .welcomeContent {
     max-width: 700px;
     margin: auto;
